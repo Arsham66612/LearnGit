@@ -25,11 +25,11 @@ Response:
 	->Initialized empty Git repository in /path/to/your/project
 
 Description:
-	->Now git can successfully track yout work and log it to you.Your repository created successfully :)
+	->Now git can successfully track your work and log it to you.Your repository created successfully :)
 
 Optional:
 	-> now if you use "git status" command again, you'll see this response -> On branch master , No commits yet
 
-4.if you want to make sure you did all process in he right way just get an "ls -a", You'll see a hidden directory named ",git" 
+4.if you want to make sure you did all process in the right way just get an "ls -a", You'll see a hidden directory named ".git" 
 
 You have completed your first step at git. 
