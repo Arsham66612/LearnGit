@@ -1,0 +1,35 @@
+so i am on my way to learn backend and hopefully get good at it but the first and most
+important step is to learn a Version Control System(VCS) and the best choice is 
+Git, the most popular VCS available at the time, so lets begin. 
+
+by the way i am following along the Colt Steel Tutorial.
+shout out to him for his great tutorials.
+If you want to Learn SQL/mySql, I highly recommend this dude's tutorial. 
+
+
+# first step in git 
+so if we want git to track our project, we must initialize our project that it is a git repository.
+1.make a directory for you project. 
+
+2.at root directory of your project open the terminal and use "git status" command, you will see this response:
+
+Response:  
+	-> fatal: not a git repository (or any of the parent directories): .git
+
+Description:
+	-> It tells us that we have not initialize our project and git can not track it.
+
+3.use "git init" command. 
+
+Response: 
+	->Initialized empty Git repository in /path/to/your/project
+
+Description:
+	->Now git can successfully track yout work and log it to you.Your repository created successfully :)
+
+Optional:
+	-> now if you use "git status" command again, you'll see this response -> On branch master , No commits yet
+
+4.if you want to make sure you did all process in he right way just get an "ls -a", You'll see a hidden directory named ",git" 
+
+You have completed your first step at git. 
