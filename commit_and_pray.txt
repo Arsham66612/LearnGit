@@ -1,0 +1,116 @@
+So now we move to the second step which is about commiting our changes or taking a snapshot of them. 
+
+imagine you are working on a directory, you have changed some files, you have created some new files or you have deleted some, 
+and now this is the end of the day and you want to kinda save your work or tell git that you are on this checkpoint(like games)
+in order to do that we follow this steps: 
+
+1.Always use "git status", this command gives you a summary of what you have done on the current working directory. 
+for example this is my status when I am writing this txt file for you:
+
+Response:
+	-> On branch main
+	Your branch is up to date with 'origin/main'.
+
+	Changes not staged for commit:
+	(use "git add <file>..." to update what will be committed)
+	(use "git restore <file>..." to discard changes in working directory)
+		modified:   README.md
+
+	Untracked files:
+	  (use "git add <file>..." to include in what will be committed)
+		.commit_and_pray.txt.swp
+		commit_and_pray.txt
+
+	no changes added to commit (use "git add" and/or "git commit -a")
+
+Description: 
+	-> For now we don't talk about branches so skip the first two lines but they are straight forward sentences.
+	-> So now i have changed "README.md" file, so git responded me back with this-> Changes not staged for commit:
+but what does it mean? git is trying to tell me that I have changed README.md file and now it is new to git.
+	-> What are untracked files? because i created a new file named "commit_and_pray", now git's repository don't know about it.
+	-> Read git's responses carefully, It always says what to do. 
+
+
+2.We have seen a summarize of our work from git now what to do? we use "git add" command to stage files
+at first lets talk about stage and staging area. imagine 3 different squares
+
+"""""""""""""""""""""""""""    """""""""""""""""""""""""""     """""""""""""""""""""""""""
+"        LearnGit         "    "                         "     "                         "
+"    Wroking Directory    "    "      Staging Area       "     "      Git Repository     "
+"                         "    "                         "     "                         "
+"""""""""""""""""""""""""""    """""""""""""""""""""""""""     """""""""""""""""""""""""""
+     - README.md
+     - initializing.txt
+     - commit_and_pray.txt	
+
+
+Description:
+	-> when we use "git add <filename>" command, It moves that file to staging area and make it ready to commit.
+=> git add README.md 
+
+Visualize: 
+
+"""""""""""""""""""""""""""    """""""""""""""""""""""""""     """""""""""""""""""""""""""
+"        LearnGit         "    "                         "     "                         "
+"    Wroking Directory    "    "      Staging Area       "     "      Git Repository     "
+"                         "    "                         "     "                         "
+"""""""""""""""""""""""""""    """""""""""""""""""""""""""     """""""""""""""""""""""""""
+     - initializing.txt              + README.md 
+     - commit_and_pray.txt 
+
+
+lets see the git status: 
+
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   README.md
+
+we can confirm that this file is ready to go 
+
+
+
+3.at this point we can save our progress by commiting the changes we have staged by a simple command 
+	
+	-> git commit -m "Your Message"
+we always have to set a message on every commit we do, commit messages must be meaningful and also straight forward. 
+if you have worked on a program and added a new feature to it and also debugged another part of the program,
+I prefer to commit them separately first add feature to staging area then commit with a good detailed message,
+Then add debugged files to staging area and commit them.
+
+
+It is the whole workflow you'll learn this in 1 day but always consider: 
+
+1.work on how to write good commit messages, if you are working on a team, check their messages, follow their pattern
+2.add and commit files which are related to each other, 
+add files about "Checkout Logic" -> commit 
+add files about "Cart Logic" -> commit
+
+BE NEAT, it helps your team and also after a while when you look back at your project, you won't get dizzy. 
+
+
+
+FINAL STEP: we can see a full list of our commit history by using "git log"  
+
+Response:
+	->
+Author: Arsham <mohkamiarsham234@gmail.com>
+Date:   Sat Jul 11 14:17:06 2026 +0330
+
+    Bad English - Typo
+
+commit ***
+Author: Arsham <mohkamiarsham234@gmail.com>
+Date:   Sat Jul 11 14:11:54 2026 +0330
+
+    Added the first step -> initializing git
+
+commit ***
+Author: Arsham <mohkamiarsham234@gmail.com>
+Date:   Sat Jul 11 14:08:40 2026 +0330
+
+    init project
+
+as you can see your commit messages shows up here. 
