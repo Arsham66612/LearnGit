@@ -1,3 +1,5 @@
+![Git Banner](./imgs/git.jpg)
+
 # Learn Git
 
 > My personal Git learning journey, documented for myself and anyone getting started with Git.
